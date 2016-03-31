@@ -1,0 +1,41 @@
+
+		html, body {
+			background: -webkit-linear-gradient(#3900e6, #00e6e6);
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		#location_text, #current_temp{
+			color:white;
+			font-family: 'Josefin Sans', sans-serif;
+			font-weight: 700;
+			font-size: 36px;
+		}
+		#info, #question{
+			width: 75%;
+			color:gray;
+			font-family: 'Josefin Sans', sans-serif;
+			font-weight: 700;
+			font-size: 36px;
+			margin: 0 auto;
+			text-align: center;
+			padding-top: 20px;
+		}
+		#container{
+			width: 75%;
+			margin: 0 auto;
+			text-align: center;
+		}
+		#location{
+			width: 75%;
+			margin: 0 auto;
+			text-align: center;
+		}
+		#map {
+			height: 250px; 250px;
+			margin 0 auto;
+		}
+		#pano {
+			height: 250px; 250px;
+			margin 0 auto;
+		}

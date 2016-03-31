@@ -2,17 +2,29 @@
 <html>
 <head>
 	<title></title>
-	<style>
-#hero{
-	font-size: 12px;
-	}
-	</style>
-}
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href="style.css" type='text/css' rel='stylesheet' />
+
 </head>
 <body>
+	<div id='question'>What's the current temperature in?</div>
+	<div id ="info"> The current temperature in <span id="location_text">--</span> is <span id="current_temp"> --</span> degrees farenhight</div>
+	<hr>
+	<div id="container">
+		<br><br>
 
-<div id="hero">Coming Soon</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="app.js"></script>
+		<input type ="text" id="location" placeholder ="Type a location">
+		<br><br>
+  		<div id="map"></div>
+			<div id="pano"></div>
+			<div id ="photos"></div>
+	</div>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAMpTmCK85uBE6mLwqbLzTAMAXlCcdEr8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="app.js"></script>
 </body>
 </html>
+
+<!-- &callback=initMap"
+async defer -->
