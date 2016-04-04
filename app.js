@@ -1,7 +1,7 @@
 //change FoureSquare oauth_token
 //get AJAX working for photos
 //add news API's (Twitter, NYT, faceBook, reddit)
-//add weatehr icons
+//add weatehr icons array
 //add photo details as hover states
 
 
