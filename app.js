@@ -28,6 +28,10 @@ window.onload = function(){
 					lng = r.coord.lon;
 					lat = r.coord.lat;
 					tempEl.text( initMap(r.coord.lat,r.coord.lon))
+					var weatherDescription = r.weather.description
+					var weatherImage = r.weather.icon
+					var icon = "http://openweathermap.org/img/w/" + weatherImage;
+					console.log("Description: " + weatherDescription + ", Icon: " +weatherImage)
    			})
 photo(location);
 		};
