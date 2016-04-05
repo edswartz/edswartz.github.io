@@ -1,7 +1,7 @@
 //change FoureSquare oauth_token
-//get AJAX working for photos
+//get AJAX working for photos <check!>
 //add news API's (Twitter, NYT, faceBook, reddit)
-//add weatehr icons array
+//add weather icons array <check>
 //add photo details as hover states
 
 
@@ -31,12 +31,13 @@ window.onload = function(){
 						r.weather.forEach(function(jdata){
 							console.log(jdata.description, jdata.icon)
 							var icon = "http://openweathermap.org/img/w/" + jdata.icon + ".png"
-
+								var $wDescription = jdata.description;
 								var $iconTag = $('<img>');
 								$iconTag.attr('src',icon);
-								$('#wIcon').append($iconTag)
-
-
+								$('#wIcon').empty();
+								$('wDescription').empty();
+								$('#wIcon').append($iconTag);
+								$('#wDescription').append($wDescription);
 						})
    			})
 photo(location);
@@ -66,6 +67,7 @@ photo(location);
 	}
 
 	function photo(location){
+		$('#photos').empty()
 		var urlPartOne = "https://api.foursquare.com/v2/venues/explore?near="+ location
 		var urlPartTwo = "&section='sights'&venuePhotos=1&oauth_token=5TGCDCKOGROGKIN1MFG5JFRAEBYG2LMUZ1BTWGBESAL2JNCJ&v=20160319"
 		var venueUrl = urlPartOne + urlPartTwo;
