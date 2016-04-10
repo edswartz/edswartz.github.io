@@ -12,15 +12,12 @@ window.onload = function(){
 		$("#info").hide();
 		})
 
-		// Get the Object by ID
-		var a = document.getElementById("edGlobe");
-		// Get the SVG document inside the Object tag
-		var svgDoc = a.contentDocument;
 
-		// Get one of the SVG items by ID;
-		var marker = svgDoc.getElementById("marker");
-		// Set the colour to something else
-		marker.setAttribute("transform", "translate(50,150)");
+$(function(){
+		$('.globe__worldmap__front, .globe__worldmap__back').css({'background-image':"red"})
+	})
+// 		$('.globe__worldmap__front, .globe__worldmap__back').css({'background-image':svgDoc})
+// console.log(svgDoc)
 
 	$('#location').bind('keyup', function(event){
 	 var location = $(event.target).val();
@@ -40,7 +37,6 @@ window.onload = function(){
 					lat = r.coord.lat;
 					tempEl.text( initMap(r.coord.lat,r.coord.lon))
 						r.weather.forEach(function(jdata){
-							console.log(jdata.description, jdata.icon)
 							var icon = "http://openweathermap.org/img/w/" + jdata.icon + ".png"
 								var $wDescription = jdata.description;
 								var $iconTag = $('<img>');
@@ -50,8 +46,9 @@ window.onload = function(){
 								$('#wIcon').append($iconTag);
 								$('#wDescription').append($wDescription);
 						})
+						mapPopulate(lng,lat,location)
    			})
-photo(location);
+       photo(location);
 		};
 	})
 
@@ -75,6 +72,25 @@ photo(location);
 	        }
 	      });
 	  map.setStreetView(panorama);
+	}
+
+
+	function mapPopulate(lng,lat,city) {
+		var mapLng = ((180 +lng) * 1.26)
+		var mapLat = ((90-lat) * 1.3)
+
+			// Get the Object by ID
+			var a = document.getElementById("edGlobe");
+			// Get the SVG document inside the Object tag
+			var svgDoc = a.contentDocument;
+
+			// Get one of the SVG items by ID;
+			var marker = svgDoc.getElementById("marker");
+			// Set the colour to something else
+			marker.setAttribute("transform", "translate("+ mapLng + "," + mapLat +")");
+			var cityEl = svgDoc.getElementById("city");
+			$(cityEl).text(city)
+			console.log(mapLat,mapLng)
 	}
 
 	function photo(location){

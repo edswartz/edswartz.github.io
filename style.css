@@ -20,22 +20,33 @@
 			margin: 0 auto;
 			text-align: center;
 			padding-top: 20px;
+
 		}
 		#container{
 			width: 75%;
 			margin: 0 auto;
 			text-align: center;
 		}
+		#headerWrapper{
+			margin: 0 auto;
+		}
 		#location{
 			width: 75%;
 			margin: 0 auto;
 			text-align: center;
+
+		}
+		#wIcon{
+			float: right;
+		}
+		#lowerWrapper{
+				margin: 0 auto;
 		}
 		#map {
-			height: 250px; 250px;
-			margin 0 auto;
+			height: 250px;
+			margin: 0 auto;
 		}
 		#pano {
-			height: 250px; 250px;
-			margin 0 auto;
+			height: 250px;
+			margin: 0 auto;
 		}

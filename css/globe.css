@@ -30,7 +30,7 @@ Globe Elements
 
 .globe__container {
   overflow: visible;
-  position: relative;  
+  position: relative;
   display: block;
   margin: 0;
   padding: 0;
@@ -53,11 +53,11 @@ Globe Elements
 .globe__container,
 .globe {
   width: 200px;
-  height: 200px;  
+  height: 200px;
 }
 .globe {
   overflow: visible;
-  position: relative;  
+  position: relative;
   display: block;
   margin: 0;
   padding: 0;
@@ -73,7 +73,7 @@ Globe Elements
 .globe__inner_shadow,
 .globe__reflections__top,
 .globe__outer_shadow {
-  position: absolute; display: block; margin: 0; right: auto; bottom: auto;  
+  position: absolute; display: block; margin: 0; right: auto; bottom: auto;
 }
 
 .globe__sphere,
@@ -113,4 +113,3 @@ Globe Elements
 .globe__inner_shadow { background-image: url(../globe_images/inner_shadow.svg);}
 .globe__worldmap__front { background-position: 0px 0px;}
 .globe__worldmap__back { background-position: 0px -200px;}
-
