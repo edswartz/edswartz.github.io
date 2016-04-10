@@ -2,12 +2,43 @@
 <html>
 <head>
 	<title></title>
+
+	<!--Links for fonts, style sheets. At the bottom of the body section find js scripts for
+      -Google Maps API with key
+		  - jquery
+			- velocity & globe service the spinning globe animation
+		  - app.js proprietary Javascript  -->
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
 	<link href="style.css" type='text/css' rel='stylesheet' />
+	<link href="css/globe.css" rel="stylesheet" />
+
+	<object id="edGlobe" data="globe_images/worldmap_2x_newyork.svg" type="image/svg+xml" height="50" width="50">
+	Your browser doesn't support SVG
+	</object>
 
 </head>
 <body>
 	<div id='question'>What's it like in?</div>
+
+	<div class="globe__placeholder">
+		<div class="globe__container">
+			<div class="globe" style="visibility: hidden;">
+				<div class="globe__sphere"></div>
+				<div class="globe__outer_shadow"></div>
+				<!-- <div class="globe__reflections__bottom"></div> -->
+
+				<div class="globe__worldmap">
+					<div class="globe__worldmap__back"></div>
+					<div class="globe__worldmap__front"></div>
+				</div>
+
+				<div class="globe__inner_shadow"></div>
+				<!-- <div class="globe__reflections__top"></div> -->
+			</div>
+		</div>
+	</div>
+
+
 	<div id ="info"> The current temperature in <span id="location_text">--</span> is <span id="current_temp"> --</span> degrees farenhight and <span id ="wDescription"></span> </div>
 	<hr>
 	<div id="container">
@@ -23,7 +54,9 @@
 
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAMpTmCK85uBE6mLwqbLzTAMAXlCcdEr8"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="app.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/globe_animation.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>
 
