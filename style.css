@@ -38,7 +38,45 @@
 		}
 		#wIcon{
 			float: right;
+			transform:scale(4);
+			display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+					-webkit-animation: shimmy 3s infinite;
+				animation: shimmy 3s infinite;
+-webkit-animation-direction: alternate;
+				animation-direction: alternate;
 		}
+		@-webkit-keyframes shimmy {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(50px, 50px);
+            transform: translate(50px, 50px);
+  }
+}
+
+@keyframes shimmy {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-50px, -50px);
+            transform: translate(-50px, -50px);
+  }
+}
 		#lowerWrapper{
 				margin: 0 auto;
 		}

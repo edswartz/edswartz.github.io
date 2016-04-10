@@ -42,7 +42,7 @@ $(function(){
 								var $iconTag = $('<img>');
 								$iconTag.attr('src',icon);
 								$('#wIcon').empty();
-								$('wDescription').empty();
+								$('#wDescription').empty();
 								$('#wIcon').append($iconTag);
 								$('#wDescription').append($wDescription);
 						})
