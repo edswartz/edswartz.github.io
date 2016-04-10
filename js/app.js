@@ -20,7 +20,7 @@ window.onload = function(){
 		// Get one of the SVG items by ID;
 		var marker = svgDoc.getElementById("marker");
 		// Set the colour to something else
-		marker.setAttribute("transform", "translate(200,150)");
+		marker.setAttribute("transform", "translate(50,150)");
 
 	$('#location').bind('keyup', function(event){
 	 var location = $(event.target).val();
