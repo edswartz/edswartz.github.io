@@ -13,11 +13,8 @@ window.onload = function(){
 		})
 
 
-$(function(){
-		$('.globe__worldmap__front, .globe__worldmap__back').css({'background-image':"red"})
-	})
-// 		$('.globe__worldmap__front, .globe__worldmap__back').css({'background-image':svgDoc})
-// console.log(svgDoc)
+
+
 
 	$('#location').bind('keyup', function(event){
 	 var location = $(event.target).val();
@@ -78,19 +75,20 @@ $(function(){
 	function mapPopulate(lng,lat,city) {
 		var mapLng = ((180 +lng) * 1.26)
 		var mapLat = ((90-lat) * 1.3)
-
-			// Get the Object by ID
 			var a = document.getElementById("edGlobe");
-			// Get the SVG document inside the Object tag
 			var svgDoc = a.contentDocument;
-
-			// Get one of the SVG items by ID;
 			var marker = svgDoc.getElementById("marker");
-			// Set the colour to something else
 			marker.setAttribute("transform", "translate("+ mapLng + "," + mapLat +")");
 			var cityEl = svgDoc.getElementById("city");
 			$(cityEl).text(city)
-			console.log(mapLat,mapLng)
+
+
+	console.log("Hello")
+					$('.globe__worldmap__front').css({
+					'left': '0', 'top': '0', 'width': '1000px', 'height': '200px', 'overflow': 'visible',
+				  'background-image':  'url(' + svgDoc +')',
+					'z-index': 100,
+				  'background-repeat': 'no-repeat'})
 	}
 
 	function photo(location){

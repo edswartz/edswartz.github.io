@@ -50,9 +50,9 @@ $(document).ready(function(){
     	for (var i = 0; i < 99; i++) {
 			$globe_fr.velocity({translateX: [ globe_el_x[0], globe_el_x[1] ] }, {duration: continents_loop_interval, easing: "linear"});
 			$globe_bk.velocity({translateX: [ globe_el_x[1], globe_el_x[0] ] }, {duration: continents_loop_interval, easing: "linear"});
-    	};  
+    	};
 		$globe_fr.velocity({translateX: [ globe_el_x[0], globe_el_x[1] ] }, {duration: continents_loop_interval, easing: "linear"});
-		$globe_bk.velocity({translateX: [ globe_el_x[1], globe_el_x[0] ] }, {duration: continents_loop_interval, easing: "linear", complete: continents_loop });  
+		$globe_bk.velocity({translateX: [ globe_el_x[1], globe_el_x[0] ] }, {duration: continents_loop_interval, easing: "linear", complete: continents_loop });
     }
 
 

@@ -38,6 +38,7 @@
 		}
 		#wIcon{
 			float: right;
+			margin-right:50px;
 			transform:scale(4);
 			display: -webkit-box;
   display: -webkit-flex;
@@ -60,10 +61,12 @@
   0% {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+						transform: scale(1);
   }
   100% {
-    -webkit-transform: translate(50px, 50px);
-            transform: translate(50px, 50px);
+    -webkit-transform: translate(200px, 200px);
+            transform: translate(200px, 200px);
+						transform: scale(4);
   }
 }
 
@@ -71,10 +74,12 @@
   0% {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+						transform: scale(1);
   }
   100% {
-    -webkit-transform: translate(-50px, -50px);
-            transform: translate(-50px, -50px);
+    -webkit-transform: translate(-300px, -100px);
+            transform: translate(-300px, -100px);
+							transform: scale(3);
   }
 }
 		#lowerWrapper{
