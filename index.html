@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>My Little World</title>
 
 	<!--Links for fonts, style sheets. At the bottom of the body section find js scripts for
       -Google Maps API with key
@@ -11,35 +11,33 @@
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
 	<link href="style.css" type='text/css' rel='stylesheet' />
 	<link href="css/globe.css" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="css/jquery.svg.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.svg.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.svg.js"></script>
-<script type="text/javascript" src="js/jquery.svgdom.js"></script>
-
-	<object id="edGlobe" data="globe_images/worldmap_2x_newyork.svg" type="image/svg+xml" height="400" width="1000">
-	Your browser doesn't support SVG
-	</object>
-
+	<script type="text/javascript" src="js/jquery.svg.js"></script>
+	<script type="text/javascript" src="js/jquery.svgdom.js"></script>
 </head>
+
 <body>
+<!-- Below object is the background image of the spinning globe. The long & lat and city populate in this object, but I want object to populate globe -->
+
+	<!-- <object id="edGlobe" data="globe_images/worldmap_2x_newyork.svg" type="image/svg+xml" height="400" width="1000">
+	Your browser doesn't support SVG
+	</object> -->
+
 	<div id='question'>What's it like in?</div>
 
-<!--Insert Globe divs. Note that globe_worldmap contain location marker as a
-background image in css-->
+	<!--Insert Globe divs. Note that globe_worldmap contain location marker as a
+	background image in css-->
 	<div class="globe__placeholder">
 		<div class="globe__container">
 			<div class="globe" style="visibility: hidden;">
 				<div class="globe__sphere"></div>
 				<div class="globe__outer_shadow"></div>
-				<!-- <div class="globe__reflections__bottom"></div> -->
-
 				<div class="globe__worldmap">
 					<div class="globe__worldmap__back"></div>
 					<div class="globe__worldmap__front"></div>
 				</div>
-
 				<div class="globe__inner_shadow"></div>
-				<!-- <div class="globe__reflections__top"></div> -->
 			</div>
 		</div>
 	</div>
@@ -47,27 +45,31 @@ background image in css-->
 
 <!--This section is initially hidden by jQuery but shows when user inputs a city name -->
 <div id="headerWrapper">
-	<div id ="info"> The current temperature in <span id="location_text">--</span> is <span id="current_temp"> --</span> degrees farenhight and <span id ="wDescription"></span> </div>
-		<div id='wIcon'></div>
-		</div>
+		<div id ="info"> The current temperature in <span id="location_text">--</span> is <span id="current_temp"> --</span> degrees farenhight and <span id ="wDescription"></span> </div>
+			<div id='wIcon'></div>
+</div>
 	<hr>
-	<div id="container">
+<div id="container">
 		<br><br>
 				<input type ="text" id="location" placeholder ="Type a location">
 		<br><br>
 
-  		<div id="map"></div>
-			<div id="pano"></div>
-			<div id ="photos"></div>
+  <div id="map"></div>
+	<div id="pano"></div>
 
-	</div>
+	<div id="photos">
+		<p class="hovertext"></p>
+	 </div>
+</div>
+
+
+
 
 <!--Scripts for Google Maps, jQuery and spinning globe -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAMpTmCK85uBE6mLwqbLzTAMAXlCcdEr8"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/velocity.min.js"></script>
 	<script src="js/globe_animation.js"></script>
-
 	<script src="js/app.js"></script>
 </body>
 </html>
