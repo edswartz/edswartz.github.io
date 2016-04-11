@@ -1,7 +1,8 @@
-//change FourSquare oauth_token
 //get AJAX working for photos <check!>
-//add news API's (Twitter, NYT, faceBook, reddit) <challenged by Oauth2>
-//add weather icons array <check>
+//add weather icons array <check!>
+//change FourSquare oauth_token <challenged by Oauth2 for server>
+//add news API's (Twitter, NYT, faceBook, reddit) <challenged by Oauth2 for server>
+//get map and marker details into spinning globe <challenged by SVG<->CSS >
 //add photo details as hover states <challenged by hidden css attribute>
 
 
@@ -67,25 +68,22 @@ window.onload = function(){
 	  map.setStreetView(panorama);
 	}
 
-
-	function mapPopulate(lng,lat,city) {
-		var mapLng = ((180 +lng) * 1.26)
-		var mapLat = ((90-lat) * 1.3)
-			var a = document.getElementById("edGlobe");
-			var svgDoc = a.contentDocument;
-			var marker = svgDoc.getElementById("marker");
-			marker.setAttribute("transform", "translate("+ mapLng + "," + mapLat +")");
-			var cityEl = svgDoc.getElementById("city");
-			$(cityEl).text(city)
-
-
-	//Code to get map into spinning globe
-					// $('.globe__worldmap__front').css({
-					// 'left': '0', 'top': '0', 'width': '1000px', 'height': '200px', 'overflow': 'visible',
-				  // 'background-image':  'url(' + svgDoc +')',
-					// 'z-index': 100,
-				  // 'background-repeat': 'no-repeat'})
-	}
+// //Code to get map into spinning globe
+// 	function mapPopulate(lng,lat,city) {
+// 		var mapLng = ((180 +lng) * 1.26)
+// 		var mapLat = ((90-lat) * 1.3)
+// 			var a = document.getElementById("edGlobe");
+// 			var svgDoc = a.contentDocument;
+// 			var marker = svgDoc.getElementById("marker");
+// 			marker.setAttribute("transform", "translate("+ mapLng + "," + mapLat +")");
+// 			var cityEl = svgDoc.getElementById("city");
+// 			$(cityEl).text(city)	
+// 		$('.globe__worldmap__front').css({
+// 					'left': '0', 'top': '0', 'width': '1000px', 'height': '200px', 'overflow': 'visible',
+// 				  'background-image':  'url(' + svgDoc +')',
+// 					'z-index': 100,
+// 				  'background-repeat': 'no-repeat'})
+// 	}
 
 	function photo(location){
 		$('#photos').empty()
@@ -116,7 +114,7 @@ window.onload = function(){
 // photoObj.caption = $hovertext;
 // $($imageTag).addClass('hover')
 //$(#photos).append(photoObj.photo[0]outerHTML)
-
+console.log($hovertext)
 //Code to show text on mouseover
 										$('.hover').mouseover(function() {
 										  $('.hovertext').css("visibility","visible");
