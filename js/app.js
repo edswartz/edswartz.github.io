@@ -1,9 +1,10 @@
 //get AJAX working for photos <check!>
 //add weather icons array <check!>
+//add photo details as hover states <check!>
 //change FourSquare oauth_token <challenged by Oauth2 for server>
 //add news API's (Twitter, NYT, faceBook, reddit) <challenged by Oauth2 for server>
 //get map and marker details into spinning globe <challenged by SVG<->CSS >
-//add photo details as hover states <challenged by hidden css attribute>
+
 
 
 
