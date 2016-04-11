@@ -85,6 +85,11 @@ window.onload = function(){
 // 				  'background-repeat': 'no-repeat'})
 // 	}
 
+
+
+
+
+
 	function photo(location){
 		$('#photos').empty()
 //			var photoObj = {}
@@ -114,21 +119,22 @@ window.onload = function(){
 // photoObj.caption = $hovertext;
 // $($imageTag).addClass('hover')
 //$(#photos).append(photoObj.photo[0]outerHTML)
-console.log($hovertext)
 //Code to show text on mouseover
-										$('.hover').mouseover(function() {
-										  $('.hovertext').css("visibility","visible");
-										});
+										// $('.hover').mouseover(function() {
+										//   $('.hovertext').css("visibility","visible");
+										// });
 
-										$('.hover').mouseout(function() {
-										  $('.hovertext').css("visibility","hidden");
-										});
+										// $('.hover').mouseout(function() {
+										//   $('.hovertext').css("visibility","hidden");
+										// });
 							})
 						})
 					})
 				})
 			})
-
+		$("#photos").sliphover({
+		caption: 'hovertext'
+		})
 		}
 
 }
