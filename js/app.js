@@ -40,7 +40,7 @@ window.onload = function(){
 								$('#wIcon').append($iconTag);
 								$('#wDescription').append($wDescription);
 						})
-						mapPopulate(lng,lat,location)
+						//mapPopulate(lng,lat,location)
    			})
        photo(location);
 		};
