@@ -41,7 +41,7 @@ window.onload = function(){
 								$('#wIcon').append($iconTag);
 								$('#wDescription').append($wDescription);
 						})
-						//mapPopulate(lng,lat,location)
+						mapPopulate(lng,lat,location)
    			})
        photo(location);
 		};
@@ -69,22 +69,28 @@ window.onload = function(){
 	  map.setStreetView(panorama);
 	}
 
-// //Code to get map into spinning globe
-// 	function mapPopulate(lng,lat,city) {
-// 		var mapLng = ((180 +lng) * 1.26)
-// 		var mapLat = ((90-lat) * 1.3)
-// 			var a = document.getElementById("edGlobe");
-// 			var svgDoc = a.contentDocument;
-// 			var marker = svgDoc.getElementById("marker");
-// 			marker.setAttribute("transform", "translate("+ mapLng + "," + mapLat +")");
-// 			var cityEl = svgDoc.getElementById("city");
-// 			$(cityEl).text(city)	
-// 		$('.globe__worldmap__front').css({
-// 					'left': '0', 'top': '0', 'width': '1000px', 'height': '200px', 'overflow': 'visible',
-// 				  'background-image':  'url(' + svgDoc +')',
-// 					'z-index': 100,
-// 				  'background-repeat': 'no-repeat'})
-// 	}
+//Code to get map into spinning globe
+	function mapPopulate(lng,lat,city) {
+		var mapLng = ((180 +lng) * 1.26)
+		var mapLat = ((90-lat) * 1.3)
+			var a = document.getElementById("edGlobe");
+			var svgDoc = a.contentDocument;
+			var marker = svgDoc.getElementById("marker");
+			marker.setAttribute("transform", "translate("+ mapLng + "," + mapLat +")");
+
+var viewBox = svgDoc.rootElement.viewBox;
+var vB = document.getElementsByTagName("svg")
+console.log(vB.length)
+console.log(svgDoc.rootElement.viewBox)
+			$(viewBox).attr("transform", "translate(-500 -200 1000 400)");
+			var cityEl = svgDoc.getElementById("city");
+			$(cityEl).text(city)	
+		// $('.globe__worldmap__front').css({
+		// 			'left': '0', 'top': '0', 'width': '1000px', 'height': '200px', 'overflow': 'visible',
+		// 		  'background-image':  'url(' + svgDoc +')',
+		// 			'z-index': 100,
+		// 		  'background-repeat': 'no-repeat'})
+	}
 
 
 
@@ -93,19 +99,13 @@ window.onload = function(){
 
 	function photo(location){
 		$('#photos').empty()
-//			var photoObj = {}
 		var urlPartOne = "https://api.foursquare.com/v2/venues/explore?near="+ location
 		var urlPartTwo = "&section='sights'&venuePhotos=1&oauth_token=5TGCDCKOGROGKIN1MFG5JFRAEBYG2LMUZ1BTWGBESAL2JNCJ&v=20160319"
 		var venueUrl = urlPartOne + urlPartTwo;
 			$.get(venueUrl,function(resp){
 				$.each(resp.response.groups, function(index,value){
-//					var hoverArray = [];
 					$.each(this.items, function(){
-
 							var $hovertext =this.venue.name;
-	//						hoverArray.push($hovertext);
-
-
 						$( '.hovertext').append($hovertext);
 						$.each(this.venue.photos.groups, function(){
 							$.each(this.items,function(){
@@ -114,20 +114,6 @@ window.onload = function(){
 								$($imageTag).addClass('hover')
 								$imageTag.attr('hovertext',$hovertext)
 								$('#photos').append($imageTag)
-//								$('#photos p').append($hovertext)
-
-// photoObj.photo = $imageTag;
-// photoObj.caption = $hovertext;
-// $($imageTag).addClass('hover')
-//$(#photos).append(photoObj.photo[0]outerHTML)
-//Code to show text on mouseover
-										// $('.hover').mouseover(function() {
-										//   $('.hovertext').css("visibility","visible");
-										// });
-
-										// $('.hover').mouseout(function() {
-										//   $('.hovertext').css("visibility","hidden");
-										// });
 							})
 						})
 					})

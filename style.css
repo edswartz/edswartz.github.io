@@ -6,6 +6,10 @@
 			padding: 0;*/
 		}
 
+		#edGlobe{
+  				clip-path: inset(0px 00px 200px 500px);
+		}
+
 		#location_text, #current_temp, #wDescription{
 			color:white;
 			font-family: 'Josefin Sans', sans-serif;
