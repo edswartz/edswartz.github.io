@@ -81,10 +81,11 @@ window.onload = function(){
 var viewBox = svgDoc.rootElement.viewBox;
 var vB = document.getElementsByTagName("svg")
 console.log(vB.length)
+console.log(vB[0],vB[1], vB[2])
 console.log(svgDoc.rootElement.viewBox)
 			$(viewBox).attr("transform", "translate(-500 -200 1000 400)");
 			var cityEl = svgDoc.getElementById("city");
-			$(cityEl).text(city)	
+			$(cityEl).text(city)
 		// $('.globe__worldmap__front').css({
 		// 			'left': '0', 'top': '0', 'width': '1000px', 'height': '200px', 'overflow': 'visible',
 		// 		  'background-image':  'url(' + svgDoc +')',
