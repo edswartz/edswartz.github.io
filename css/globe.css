@@ -1,12 +1,12 @@
 /**
 Basic styles (don't needed for the Globe to function)
 **/
-body { background-color: #fff; font-family: Georgia, serif; line-height: 1.5; font-size: 18px; color: #2c3e50; }
+/*body { background-color: #fff; font-family: Georgia, serif; line-height: 1.5; font-size: 18px; color: #2c3e50; }
 h2 { padding: 0;margin: 0;padding-top: 1.6em;font-size: 32px; line-height: 1.2; }
 h2 span {font-size: 65%;}
 .container { max-width: 960px; margin: 0 auto; }
 .container .btn { clear: both; padding-top: 1em; border-top: 1px solid #ccc; border-top: 1px solid rgba(0,0,0,0.1); }
-.container button { width: 100px; height: 40px; border: none; border-bottom: 1px solid #ccc; background-color: #efefef; border-radius: 4px; }
+.container button { width: 100px; height: 40px; border: none; border-bottom: 1px solid #ccc; background-color: #efefef; border-radius: 4px; }*/
 
 /**
 Globe Elements
