@@ -2,8 +2,8 @@
 		html, body {
 			background: -webkit-linear-gradient(#3900e6, #00e6e6);
 			height: 100%;
-			margin: 0;
-			padding: 0;
+			margin: 10px 0;
+			padding: 10px;
 		}
 
 		#edGlobe{

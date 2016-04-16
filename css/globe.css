@@ -26,13 +26,16 @@ Globe Elements
   margin-bottom: 16px;
   height: 200px; /* Unscaled is 200px. If 'globe__container' is scaled, multiply this value by scale() property, e.g. 200px * 0.5 = 100px */
   width:  200px; /* Unscaled is 200px. If 'globe__container' is scaled, multiply this value by scale() property, e.g. 200px * 0.5 = 100px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .globe__container {
   overflow: visible;
   position: relative;
   display: block;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   top: 0;
   left: 0;
@@ -54,12 +57,13 @@ Globe Elements
 .globe {
   width: 200px;
   height: 200px;
+  margin: 0 auto;
 }
 .globe {
   overflow: visible;
   position: relative;
   display: block;
-  margin: 0;
+  margin: auto 0;
   padding: 0;
   top: 0; left: 0;
 }
@@ -76,6 +80,7 @@ Globe Elements
 .globe__reflections__top,
 .globe__outer_shadow {
   position: absolute; display: block; margin: 0; right: auto; bottom: auto;
+  margin: 0 auto;
 }
 
 .globe__sphere,
@@ -85,10 +90,12 @@ Globe Elements
 .globe__reflections__top {
   left: 0; top: 0; width: 200px; height: 200px;
   background-position: 0 0; background-repeat: no-repeat;
+  margin: 0 auto;
 }
 .globe__outer_shadow {
   left: 0; top: 186px; width: 200px; height: 30px;
   background-position: 0 0; background-repeat: no-repeat;
+  margin: 0 auto;
 }
 
 /* Circle mask for animated SVG files */
@@ -99,6 +106,7 @@ Globe Elements
      -moz-border-radius: 50%;
           border-radius: 50%;
 -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+margin: 0 auto;
 }
 
 .globe__worldmap__front,
@@ -106,6 +114,7 @@ Globe Elements
   left: 0; top: 0; width: 1000px; height: 200px; overflow: visible;
   background-image: url(../globe_images/worldmap_2x_newyork.svg);
   background-repeat: no-repeat;
+  margin: 0 auto;
 }
 
 .globe__worldmap__front_hide,
@@ -113,6 +122,7 @@ Globe Elements
   left: 0; top: 0; width: 1000px; height: 200px; overflow: visible;
   background-image: url(../globe_images/worldmap_2x_generic.svg);
   background-repeat: no-repeat;
+  margin: 0 auto;
 }
 
 .globe__sphere { background-image: url(../globe_images/sphere.svg);}
