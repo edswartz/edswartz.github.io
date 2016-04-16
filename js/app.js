@@ -91,6 +91,7 @@ window.onload = function(){
 			marker.setAttribute("transform", "translate("+ mapLng + "," + mapLat +")");
 			var cityEl = svgDoc.getElementById("city");
 			$(cityEl).text(city)
+			$(cityEl).css("color","blue")
 
 		var svg = svgDoc.firstChild;
 		var bb=svg.getBBox();
