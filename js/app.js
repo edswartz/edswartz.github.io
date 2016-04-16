@@ -12,6 +12,7 @@
 window.onload = function(){
 	$(document).ready(function(){
 		$("#info").hide();
+		$("#edGlobe").hide();
 		})
 
 	$('#location').bind('keyup', function(event){
@@ -24,6 +25,8 @@ window.onload = function(){
 					})
 				$(document).ready(function(){
 					$("#info").show();
+						$("#edGlobe").show();
+						$("spinningGlobe").hide();
 				})
 			var apiUrl = 'http://api.openweathermap.org/data/2.5/weather?q='+ location+ '&APPID=2b156fd55f850bb54f53f7b2381058f6'
 				$.get(apiUrl, function(r){
@@ -77,20 +80,16 @@ window.onload = function(){
 			var svgDoc = a.contentDocument;
 			var marker = svgDoc.getElementById("marker");
 			marker.setAttribute("transform", "translate("+ mapLng + "," + mapLat +")");
-
-var viewBox = svgDoc.rootElement.viewBox;
-var vB = document.getElementsByTagName("svg")
-console.log(vB.length)
-console.log(vB[0],vB[1], vB[2])
-console.log(svgDoc.rootElement.viewBox)
-			$(viewBox).attr("transform", "translate(-500 -200 1000 400)");
 			var cityEl = svgDoc.getElementById("city");
 			$(cityEl).text(city)
-		// $('.globe__worldmap__front').css({
-		// 			'left': '0', 'top': '0', 'width': '1000px', 'height': '200px', 'overflow': 'visible',
-		// 		  'background-image':  'url(' + svgDoc +')',
-		// 			'z-index': 100,
-		// 		  'background-repeat': 'no-repeat'})
+
+		var svg = svgDoc.firstChild;
+		var bb=svg.getBBox();
+		var bbx=bb.x;
+		var bby=bb.y;
+		var bbw=bb.width - 500;
+		var bbh=bb.height -200;
+	svg.setAttribute("viewBox", [bbx, bby, bbw, bbh].join(" "));
 	}
 
 
