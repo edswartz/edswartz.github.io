@@ -67,6 +67,8 @@ Globe Elements
 .globe__worldmap,
 .globe__worldmap__front,
 .globe__worldmap__back,
+.globe__worldmap__front_hide,
+.globe__worldmap__back_hide,
 .globe__sphere,
 .globe__outer_shadow,
 .globe__reflections__bottom,
@@ -106,6 +108,13 @@ Globe Elements
   background-repeat: no-repeat;
 }
 
+.globe__worldmap__front_hide,
+.globe__worldmap__back_hide {
+  left: 0; top: 0; width: 1000px; height: 200px; overflow: visible;
+  background-image: url(../globe_images/worldmap_2x_generic.svg);
+  background-repeat: no-repeat;
+}
+
 .globe__sphere { background-image: url(../globe_images/sphere.svg);}
 .globe__outer_shadow { background-image: url(../globe_images/outer_shadow.svg);}
 .globe__reflections__top { background-image: url(../globe_images/reflections.svg);}
@@ -113,3 +122,5 @@ Globe Elements
 .globe__inner_shadow { background-image: url(../globe_images/inner_shadow.svg);}
 .globe__worldmap__front { background-position: 0px 0px;}
 .globe__worldmap__back { background-position: 0px -200px;}
+.globe__worldmap__front_hide { background-position: 0px 0px;}
+.globe__worldmap__back_hide { background-position: 0px -200px;}

@@ -22,6 +22,8 @@ $(document).ready(function(){
 
     var $globe_fr = $(".globe__worldmap__front"),
 		$globe_bk = $(".globe__worldmap__back"),
+		$globe_fr_hide = $(".globe__worldmap__front_hide"),
+	 $globe_bk_hide = $(".globe__worldmap__back_hide"),
 		$globe = $(".globe");
 
 	var globe_el_x = [0, -473];
@@ -33,6 +35,8 @@ $(document).ready(function(){
         $.Velocity.hook($globe, "visibility", "hidden");
 	    $.Velocity.hook($globe_fr, "translateX", globe_el_x[1] + "px");
 	    $.Velocity.hook($globe_bk, "translateX", globe_el_x[0] + "px");
+			$.Velocity.hook($globe_fr_hide, "translateX", globe_el_x[1] + "px");
+			$.Velocity.hook($globe_bk_hide, "translateX", globe_el_x[0] + "px");
 	}
 
 
@@ -50,19 +54,25 @@ $(document).ready(function(){
     	for (var i = 0; i < 99; i++) {
 			$globe_fr.velocity({translateX: [ globe_el_x[0], globe_el_x[1] ] }, {duration: continents_loop_interval, easing: "linear"});
 			$globe_bk.velocity({translateX: [ globe_el_x[1], globe_el_x[0] ] }, {duration: continents_loop_interval, easing: "linear"});
+			$globe_fr_hide.velocity({translateX: [ globe_el_x[0], globe_el_x[1] ] }, {duration: continents_loop_interval, easing: "linear"});
+			$globe_bk_hide.velocity({translateX: [ globe_el_x[1], globe_el_x[0] ] }, {duration: continents_loop_interval, easing: "linear"});
     	};
 		$globe_fr.velocity({translateX: [ globe_el_x[0], globe_el_x[1] ] }, {duration: continents_loop_interval, easing: "linear"});
 		$globe_bk.velocity({translateX: [ globe_el_x[1], globe_el_x[0] ] }, {duration: continents_loop_interval, easing: "linear", complete: continents_loop });
+		$globe_fr_hide.velocity({translateX: [ globe_el_x[0], globe_el_x[1] ] }, {duration: continents_loop_interval, easing: "linear"});
+		$globe_bk_hide.velocity({translateX: [ globe_el_x[1], globe_el_x[0] ] }, {duration: continents_loop_interval, easing: "linear", complete: continents_loop });
     }
 
 
 	/* Toggle animation */
 	$('#toggle_animation').click(function(){
 
-		if ( $globe_fr.hasClass("velocity-animating") ) {
+		if ( $globe_fr.hasClass("velocity-animating") || $globe_fr_hide.hasClass("velocity-animating")) {
 			$globe.velocity("stop", true);
 			$globe_fr.velocity("stop", true);
 			$globe_bk.velocity("stop", true);
+			$globe_fr_hide.velocity("stop", true);
+			$globe_bk_hide.velocity("stop", true);
 		} else {
 	        set_globe();
 			globe_intro();

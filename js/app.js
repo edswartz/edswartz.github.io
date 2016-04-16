@@ -13,6 +13,7 @@ window.onload = function(){
 	$(document).ready(function(){
 		$("#info").hide();
 		$("#edGlobe").hide();
+		hideMarkers();
 		})
 
 	$('#location').bind('keyup', function(event){
@@ -70,6 +71,14 @@ window.onload = function(){
 	        }
 	      });
 	  map.setStreetView(panorama);
+	}
+
+//code to hide globe marker on load
+	function hideMarkers(){
+		$('.globe__worldmap__front').hide()
+		$('.globe__worldmap__back').hide()
+		$('.globe__worldmap__front_hide').show()
+		$('.globe__worldmap__back_hide').show()
 	}
 
 //Code to get map into spinning globe
