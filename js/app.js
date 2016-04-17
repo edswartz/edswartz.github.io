@@ -3,7 +3,7 @@
 //add photo details as hover states <check!>
 //change FourSquare oauth_token <challenged by Oauth2 for server>
 //add news API's (Twitter, NYT, faceBook, reddit) <challenged by Oauth2 for server>
-//get map and marker details into spinning globe <challenged by SVG<->CSS >
+//get map and marker details into spinning globe <worked around it! >
 
 
 
