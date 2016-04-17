@@ -31,7 +31,7 @@ Globe Elements
   align-items: center;
 }
 
-.globe__container {
+.globe__placeholder .globe__container {
   overflow: visible;
   position: relative;
   display: block;
