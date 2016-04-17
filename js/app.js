@@ -91,6 +91,18 @@ window.onload = function(){
 		$('.globe_worldmap').hide()
 		$('.globe_inner_shadow').hide()
 
+		var $globe_fr = $(".globe__worldmap__front"),
+		$globe_bk = $(".globe__worldmap__back"),
+		$globe_fr_hide = $(".globe__worldmap__front_hide"),
+	 $globe_bk_hide = $(".globe__worldmap__back_hide"),
+		$globe = $(".globe")
+		
+		$globe.velocity("stop", true);
+		$globe_fr.velocity("stop", true);
+		$globe_bk.velocity("stop", true);
+		$globe_fr_hide.velocity("stop", true);
+		$globe_bk_hide.velocity("stop", true);
+
 		// $('.globe__worldmap__front').hide()
 		// $('.globe__worldmap__back').hide()
 		// $('.globe__worldmap__front_hide').show()

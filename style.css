@@ -60,65 +60,65 @@
 			margin-right:50px;
 			transform:scale(4);
 			display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
+  		display: -webkit-flex;
+  		display: -ms-flexbox;
+  		display: flex;
+  		text-align: center;
+  				-webkit-box-pack: center;
+  				-webkit-justify-content: center;
+      		-ms-flex-pack: center;
           justify-content: center;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
+  				-webkit-align-content: center;
+      		-ms-flex-line-pack: center;
           align-content: center;
 					-webkit-animation: shimmy 3s infinite;
-				animation: shimmy 3s infinite;
--webkit-animation-direction: alternate;
-				animation-direction: alternate;
-		}
-		@-webkit-keyframes shimmy {
-  0% {
-    -webkit-transform: translate(0, 0);
+					animation: shimmy 3s infinite;
+					-webkit-animation-direction: alternate;
+					animation-direction: alternate;
+				}
+				@-webkit-keyframes shimmy {
+  0% 		{
+    			-webkit-transform: translate(0, 0);
             transform: translate(0, 0);
 						transform: scale(1);
-  }
+  			}
   100% {
-    -webkit-transform: translate(200px, 200px);
+    			-webkit-transform: translate(200px, 200px);
             transform: translate(200px, 200px);
 						transform: scale(4);
-  }
-}
+  			}
+			}
 
 @keyframes shimmy {
   0% {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
 						transform: scale(1);
-  }
+  			}
   100% {
     -webkit-transform: translate(-300px, -100px);
             transform: translate(-300px, -100px);
 							transform: scale(3);
-  }
-}
+  			}
+			}
+
 		#lowerWrapper{
 				margin: 0 auto;
-		}
+			}
 		#map {
-			height: 250px;
-			margin: 0 auto;
-		}
+				height: 250px;
+				margin: 0 auto;
+			}
 		#pano {
-			height: 250px;
-			margin: 0 auto;
-		}
+				height: 250px;
+				margin: 0 auto;
+			}
 		#photo  p {
-			position: relative;
-			bottom: 30px;
-			left: 5px;
-			font-size: 18px;
-
-		}
+				position: relative;
+				bottom: 30px;
+				left: 5px;
+				font-size: 18px;
+			}
 		.hover{
 			font-family: 'Josefin Sans', sans-serif;
 			font-weight: 700;
