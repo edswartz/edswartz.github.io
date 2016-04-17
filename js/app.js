@@ -46,6 +46,7 @@ window.onload = function(){
 								$('#wDescription').append($wDescription);
 						})
 						mapPopulate(lng,lat,location)
+						hideSpinningGlobe()
    			})
        photo(location);
 		};
@@ -79,6 +80,21 @@ window.onload = function(){
 		$('.globe__worldmap__back').hide()
 		$('.globe__worldmap__front_hide').show()
 		$('.globe__worldmap__back_hide').show()
+	}
+
+	function hideSpinningGlobe(){
+		$('.globe_placeholder').hide()
+		$('.globe__container').hide()
+		$('.globe').hide()
+		$('.globe_sphere').hide()
+		$('.globe_outershadow').hide()
+		$('.globe_worldmap').hide()
+		$('.globe_inner_shadow').hide()
+
+		// $('.globe__worldmap__front').hide()
+		// $('.globe__worldmap__back').hide()
+		// $('.globe__worldmap__front_hide').show()
+		// $('.globe__worldmap__back_hide').show()
 	}
 
 //Code to get map into spinning globe
