@@ -6,6 +6,10 @@
 			padding: 10px;
 		}
 
+		body {
+			overflow-x: hidden;
+		}
+
 		#edGlobe{
 					overflow: hidden;
   				clip-path: inset( 0px 00px 200px 500px);
