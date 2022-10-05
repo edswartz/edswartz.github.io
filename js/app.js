@@ -29,7 +29,7 @@ window.onload = function(){
 						$("#edGlobe").show();
 						$("spinningGlobe").hide();
 				})
-			var apiUrl = 'http://api.openweathermap.org/data/2.5/weather?q='+ location+ '&APPID=2b156fd55f850bb54f53f7b2381058f6'
+			var apiUrl = 'http://api.openweathermap.org/data/2.5/weather?'+ location+ '&APPID=2b156fd55f850bb54f53f7b2381058f6'
 				$.get(apiUrl, function(r){
 					tempEl.text( convert(r.main.temp));
 					lng = r.coord.lon;
